@@ -80,7 +80,7 @@ class ATM:
     #  show main menu method
     def show_main_menu(self):
         while True:
-            menu_choice = input("- (login) to show login forms\n- (exit) to quit:\n ")
+            menu_choice = input("- (login) to show login forms\n- (exit) to quit\n ")
             if menu_choice == "login":
                 username = input("Username: ")
                 password = input("Password: ")
@@ -101,8 +101,9 @@ class ATM:
                     count += 1
     
             if count == len(self.account_list):
-                current_tries += 1
-                if current_tries == self.try_limit:
+                print("Username or Password incorrect! Try again.")
+                self.current_tries += 1
+                if self.current_tries == self.try_limit:
                     sys.exit("Error: you have reached the maximum of tries.")
                 username = input("Username: ")
                 password = input("Password: ")
@@ -132,6 +133,7 @@ class ATM:
                 print(f"New balance: {instance.balance}")
 
         sys.exit()
+
 
 # testing the system
 primary_account = BankAccount(2000, "anas", "anasjm")
