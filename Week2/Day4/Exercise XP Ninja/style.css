@@ -1,0 +1,255 @@
+:root {
+    --primary-color: #070A23;
+    --secondary-color: #3666DB;
+    --gray: #5B657C;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    color: var(--primary-color);
+}
+
+/* ------------------ header ------------------ */
+
+header {
+    padding: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+    font-weight: 600;
+}
+
+nav li {
+    cursor: pointer;
+}
+
+nav li:hover {
+    color: var(--secondary-color);
+}
+
+#logo {
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    position: relative;
+    bottom: 3px;
+}
+
+.fullstop {
+    color: var(--secondary-color);
+}
+
+/* ------------------ Hero Section ------------------ */
+
+#hero-section {
+    padding: 100px 50px;
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0.603), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(images/hero-image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#hero-section > * {
+    padding: 0;
+    margin: 0;
+}
+
+#hero-section h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+}
+
+#hero-section h1 {
+    font-size: 80px;
+    line-height: 70px;
+}
+
+#hero-section p {
+    color: var(--gray);
+    font-size: 1.5rem;
+}
+
+/* ------------------- Main ------------------- */
+
+/* Articles Section */
+
+#articles-section {
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#articles-section > * {
+    margin: 0;
+}
+
+#articles-section h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    letter-spacing: 3px;
+    font-size: 0.7rem;
+    color: var(--secondary-color);
+}
+
+#articles-section h2 {
+    font-size: 2.7em;
+}
+
+#articles-section p {
+    color: var(--gray);
+    font-size: larger;
+}
+
+#hr {
+    margin: 10px 0px;
+    opacity: 30%;
+}
+
+/* Articles */
+
+#articles {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+#articles article {
+    flex: 1;
+    cursor: pointer;
+}
+
+#articles img {
+    height: 200px;
+    width: 100px;
+    width: fit-content;
+
+}
+
+#article1-image, #article2-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 200px;
+    transition: background-size 0.2s ease-in-out;
+}
+
+#article1-image {
+    background-image: url(images/switzerland.png);
+}
+
+#article1-image:hover, #article2-image:hover {
+    background-size: 105%;
+}
+
+#article2-image {
+    background-image: url(images/morocco.png);
+}
+
+#articles article section > *{
+    margin: 0;
+}
+
+#articles article section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px 0px;
+}
+
+#articles article section h6 {
+    letter-spacing: 1px;
+}
+
+#articles article section h3 {
+    font-size: xx-large;
+}
+
+#articles article section p {
+    width: 400px;
+}
+
+/* ------------------ footer ------------------ */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    border-top: #d5d6e6 1px solid;
+}
+
+footer section:first-child {
+    display: flex;
+    align-items: center;
+}
+
+footer section:first-child > * {
+    margin: 0;
+    padding: 0;
+}
+
+footer #logo {
+    font-size: 30px;
+    padding-right: 20px;
+    border-right: var(--primary-color) 1px solid;
+    position: relative;
+    bottom: 3px;
+}
+
+footer section:first-child p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--gray);
+    padding-left: 20px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+#footer-navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 50px;
+}
+
+#footer-navigation * {
+    margin: 0;
+}
+
+footer li {
+    font-size: 0.9em;
+}
+
+footer ul {
+    gap: 30px;
+}
+
+#social-media {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+}
+
+#social-media svg {
+    cursor: pointer;
+}
+
+svg:hover {
+    color: var(--secondary-color);
+}
