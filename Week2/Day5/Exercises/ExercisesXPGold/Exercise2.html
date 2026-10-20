@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EX2</title>
+</head>
+<body>
+  <script>
+    let guestList = {
+      randy: "Germany",
+      karla: "France",
+      wendy: "Japan",
+      norman: "England",
+      sam: "Argentina",
+    };
+
+    studentInput = prompt("Enter you name: ")
+
+    if (studentInput in guestList) {
+        console.log(`Hi! I'm ${studentInput}, and I'm from ${guestList[studentInput]}.`)
+    } else {
+      console.log("Hi! I'm a guest.")
+    }
+  </script>
+</body>
+</html>
