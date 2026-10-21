@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EX4</title>
+  </head>
+  <body>
+    <script>
+      function hotelCost() {
+        do {
+          numberOfNightsInput = prompt("Enter the number of nights: ");
+          checkNumber = parseInt(numberOfNightsInput);
+        } while (isNaN(checkNumber) || numberOfNightsInput == "");
+
+        return 140 * numberOfNightsInput;
+      }
+
+      function planeRideCost(params) {
+        do {
+          destination = prompt("Enter the your destination: ");
+          checkInt = parseInt(destination);
+        } while (!isNaN(checkInt) || destination == "");
+
+        switch (destination) {
+          case "London":
+            return 183;
+
+          case "Paris":
+            return 220;
+
+          default:
+            return 300;
+        }
+      }
+
+      function rentalCarCost() {
+        let total = 0;
+        do {
+          numberOfDaysInput = prompt("Enter the number days of rental car: ");
+          checkNumber = parseInt(numberOfDaysInput);
+        } while (isNaN(checkNumber) || numberOfDaysInput == "");
+
+        total = numberOfDaysInput * 40;
+
+        if (numberOfDaysInput > 10) {
+          let discount = total * 0.05;
+          return total - discount;
+        } else {
+          return total;
+        }
+      }
+
+      function totalVacationCost() {
+        let nightsCost = hotelCost();
+        let planeCost = planeRideCost();
+        let carCost = rentalCarCost();
+        console.log(
+          `Hotel cost: ${nightsCost}\nPlan ticket cost: ${planeCost}\nRental car cost: ${carCost}\n`,
+        );
+
+        return nightsCost + planeCost + carCost;
+      }
+
+      console.log(`Total cost: ${totalVacationCost()}`);
+    </script>
+  </body>
+</html>
