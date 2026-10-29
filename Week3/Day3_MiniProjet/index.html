@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="app.js" defer></script>
+    <script src="app.js" type="module" defer></script>
   </head>
   <body>
     <!-- header -->
@@ -33,13 +33,13 @@
             clip-rule="evenodd"
           />
         </svg>
-        BShoes<span>.</span>
+        <p style="margin: 0">BShoes<span>.</span></p>
       </div>
 
       <!-- control section -->
       <div id="control-section">
         <!-- search -->
-        <form action="" name="search">
+        <form action="" id="search-form" name="search">
           <input
             type="search"
             name="search-input"
@@ -51,15 +51,16 @@
           <!-- category filter -->
           <select name="categoryFilter" id="category-filter">
             <option disabled>Category</option>
-            <option value="All-Around Shoe" selected>All-Around Shoe</option>
-            <option value="Guard Shoe">Guard Shoe</option>
-            <option value="Forward Shoe">Forward Shoe</option>
+            <option value="0">All Shoes</option>
+            <option value="1">Multi Shoe</option>
+            <option value="2">Guard Shoe</option>
+            <option value="3">Forward Shoe</option>
           </select>
           <!-- sortby -->
           <select name="sortBy" id="sort-by">
             <option disabled selected>Sort By</option>
-            <option value="">qsdqsd</option>
-            <option value="">sdsg</option>
+            <option value="">A to Z</option>
+            <option value="">Z to A</option>
           </select>
         </section>
       </div>
@@ -68,62 +69,28 @@
     <!-- main -->
     <main>
       <h1>Basketball Shoes</h1>
-      <div id="cards-grid">
-        <article>
-          <img
-            src="https://static.nike.com/a/images/f_auto/dpr_3.0,cs_srgb/h_300,c_limit/7ffae7b6-133c-4f47-92cc-588f680ea2df/nike-basketball.png"
-            alt=""
-          />
-          <div>
-            <h2>Nike LeBron XXIII</h2>
-            <p>Max Impact Protection</p>
-          </div>
-        </article>
-
-        <article>
-          <img
-            src="https://static.nike.com/a/images/f_auto/dpr_3.0,cs_srgb/h_300,c_limit/eddc8b85-455d-4a20-ab56-5e6e97423ae7/nike-basketball.png"
-            alt=""
-          />
-          <div>
-            <h2>Nike LeBron XXIII</h2>
-            <p>Max Impact Protection</p>
-          </div>
-        </article>
-
-        <article>
-          <img
-            src="https://static.nike.com/a/images/f_auto,cs_srgb/w_960,c_limit/ddbfd330-28b6-494c-8e48-479b4f34e34f/nike-basketball.png"
-            alt=""
-          />
-          <div>
-            <h2>Nike LeBron XXIII</h2>
-            <p>Max Impact Protection</p>
-          </div>
-        </article>
-      </div>
+      <div id="cards-grid"></div>
     </main>
 
-    <!-- <button command="show-modal" commandfor="my-dialog">Open dialog</button> -->
-
-    <!-- <dialog id="my-dialog">
+    <dialog id="my-dialog">
       <div id="dialog">
-        <div id="dialog-image">
+        <div>
           <img
+            id="dialog-image"
             src="https://static.nike.com/a/images/f_auto,cs_srgb/w_960,c_limit/ddbfd330-28b6-494c-8e48-479b4f34e34f/nike-basketball.png"
             alt=""
           />
-          <h5>Guard Shoe</h5>
+          <h5 id="dialog-category">Guard Shoe</h5>
         </div>
         <div class="vertical-line"></div>
         <div id="dialog-details">
-          <h2>Nike LeBron XXIII</h2>
-          <h3>Max Impact Protection</h3>
-          <p>
+          <h2 id="dialog-title">Nike LeBron XXIII</h2>
+          <h3 id="dialog-metric">Max Impact Protection</h3>
+          <p id="dialog-short-description">
             Kevin Durant's signature model built for effortless scoring and
             smooth transitions.
           </p>
-          <p>
+          <p id="dialog-description">
             Features a plush, high-energy return cushioning setup that adapts to
             dynamic movements across all positions on the floor.
           </p>
@@ -142,9 +109,29 @@
           d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z"
         />
       </svg>
-    </dialog> -->
+    </dialog>
 
     <!-- footer -->
-    <footer>© Copyright - All rights reserved</footer>
+    <footer>
+      <div id="logo">
+        <!-- logo icon -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1em"
+          height="1em"
+          viewBox="0 0 24 24"
+          id="logo-icon"
+        >
+          <title>basketball-fill</title>
+          <path
+            fill-rule="evenodd"
+            d="M23 12C23 18.0751 18.0751 23 12 23C5.9249 23 1 18.0751 1 12C1 5.9249 5.9249 1 12 1C18.0751 1 23 5.9249 23 12ZM20.9451 13C20.9817 12.6679 21 12.3341 21 12C21 11.6659 20.9817 11.3321 20.9451 11L18.0435 11C18.174 9.5042 18.5958 8.0483 19.2852 6.7144C18.8707 6.1442 18.3911 5.6244 17.856 5.1655C16.812 6.9459 16.1898 8.9418 16.037 11L13 11L13 3.0549C12.6679 3.0183 12.3341 3 12 3C11.6659 3 11.3321 3.0183 11 3.0549L11 11L7.963 11C7.8102 8.9418 7.188 6.9459 6.144 5.1655C5.6089 5.6244 5.1293 6.1442 4.7148 6.7144C5.4042 8.0483 5.826 9.5042 5.9565 11L3.0549 11C3.0183 11.3321 3 11.6659 3 12C3 12.3341 3.0183 12.6679 3.0549 13L5.9565 13C5.826 14.4958 5.4042 15.9517 4.7148 17.2856C5.1293 17.8558 5.6089 18.3756 6.144 18.8345C7.188 17.0541 7.8102 15.0582 7.963 13L11 13L11 20.9451C11.3321 20.9817 11.6659 21 12 21C12.3341 21 12.6679 20.9817 13 20.9451L13 13L16.037 13C16.1898 15.0582 16.812 17.0541 17.856 18.8345C18.3911 18.3756 18.8707 17.8558 19.2852 17.2856C18.5958 15.9517 18.174 14.4958 18.0435 13L20.9451 13Z"
+            clip-rule="evenodd"
+          />
+        </svg>
+        <p style="margin: 0">BShoes<span>.</span></p>
+      </div>
+      <p>© Copyright - All rights reserved</p>
+    </footer>
   </body>
 </html>

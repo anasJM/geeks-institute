@@ -1,4 +1,4 @@
-const catalogItems = [
+export const catalogItems = [
   {
     id: 1,
     title: "Nike Sabrina 4",
@@ -14,9 +14,9 @@ const catalogItems = [
   {
     id: 2,
     title: "Nike KD 19",
-    category: "All-Around Shoe",
+    category: "Multi Shoe",
     image:
-      "https://static.nike.com/a/images/f_auto,cs_srgb/w_960,c_limit/ddbfd330-28b6-494c-8e48-479b4f34e34f/nike-basketball.png",
+      "https://media.sportsdirect.com.au/img-modify/fit=scale-down,f=auto,w=1536/dam-products/image/nike%2Faurora_ih1117-400_phslh000-2000",
     metric: "Full-Length Air Setup",
     shortDescription:
       "Kevin Durant's signature model built for effortless scoring and smooth transitions.",
@@ -38,7 +38,7 @@ const catalogItems = [
   {
     id: 4,
     title: "Nike A'Two",
-    category: "All-Around Shoe",
+    category: "Multi Shoe",
     image:
       "https://static.nike.com/a/images/f_auto/dpr_3.0,cs_srgb/h_300,c_limit/d54b8a82-cb53-4059-81a7-d97cafa524fd/nike-basketball.png",
     metric: "Zoom Air + Foam Core",
@@ -49,18 +49,6 @@ const catalogItems = [
   },
   {
     id: 5,
-    title: "Nike Air Zoom GT Jump 2",
-    category: "Forward Shoe",
-    image:
-      "https://p-korayspor.sm.mncdn.com/mnresize/1600/-/korayspor/products/FQ3680-402_2.jpg",
-    metric: "Double Zoom Air Units",
-    shortDescription:
-      "Built specifically to maximize vertical leap and soften heavy landings.",
-    fullDetails:
-      "Features stacked Zoom Air cushioning combined with a jump-focused Pebax plate for unmatched bounce and takeoff.",
-  },
-  {
-    id: 6,
     title: "Nike Ja 4 Dark Mode",
     category: "Guard Shoe",
     image:
@@ -72,51 +60,159 @@ const catalogItems = [
       "Designed with a lightweight containment system and a springy forefoot feel to support sudden changes of direction.",
   },
   {
-    id: 7,
-    title: "Nike Ja 3",
+    id: 6,
+    title: "SKX Nexus GO",
     category: "Guard Shoe",
     image:
-      "https://media-www.sportchek.ca/product/div-05-footwear/dpt-80-footwear/sdpt-01-mens/334569831/nike-ja-3-pink-mint-purple-825-u-c65bc475-1393-481f-9aad-3f9d677f3e47-jpgrendition.jpg?impolicy=gZoom",
-    metric: "Agile Low-Top Traction",
+      "https://media.sportsdirect.com.au/img-modify/fit=scale-down,f=auto,w=1536/dam-products/image/skechers%2F253015_bppk_profile_05_large",
+    metric: "Hyper Burst Cushioning",
     shortDescription:
-      "Crafted for high-flying acrobatics and relentless rim attacks.",
+      "High-rebound performance basketball shoe built for agile guards.",
     fullDetails:
-      "Features enhanced ankle freedom and aggressive multidirectional traction pattern for lightning-fast acceleration.",
+      "Features Skechers' lightweight nitrogen-infused cushioning foam and a molded heel counter for secure lockdown.",
+  },
+  {
+    id: 7,
+    title: "Adidas Harden Vol. 10",
+    category: "Guard Shoe",
+    image:
+      "https://media.sportsdirect.com.au/img-modify/fit=scale-down,f=auto,w=1536/dam-products/image/adidas%2Fki1605_5_footwear_photography_side%20medial%20center%20view_transparent",
+    metric: "Full-Length Boost",
+    shortDescription:
+      "James Harden's signature model tailored for elite deceleration and step-back shooting.",
+    fullDetails:
+      "Equipped with maximum energy return cushioning and a herringbone traction pattern engineered for unstoppable isolation play.",
   },
   {
     id: 8,
-    title: "Nike Precision 8 Low",
-    category: "Guard Shoe",
+    title: "Skechers B-Lite",
+    category: "Multi Shoe",
     image:
-      "https://www.side-step.co.za/media/catalog/product/n/k/nkk4005rb-nike-precision-8-blk-red-wht-red-wht-ih1104-001-v1_jpg.jpg",
-    metric: "Lightweight Court Feel",
+      "https://media.sportsdirect.com.au/img-modify/fit=scale-down,f=auto,w=1536/dam-products/image/skechers%2F253025_bkmt_d",
+    metric: "Flexible Comfort Build",
     shortDescription:
-      "A nimble, reliable team shoe offering fundamental lockdown and grip.",
+      "Lightweight athletic footwear adapted for casual training and light court sessions.",
     fullDetails:
-      "Sculpted low-profile collar and resilient foam midsole designed for players who rely on quick footwork and agility.",
+      "Features a shock-absorbing midsole and smooth leather-synthetic upper for all-day comfort.",
   },
   {
     id: 9,
-    title: "Nike LeBron Witness X",
-    category: "All-Around Shoe",
+    title: "White Jordan Luka 77",
+    category: "Guard Shoe",
     image:
-      "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/9688349d-4950-4076-8ee4-a6763fa0a553/LEBRON+WITNESS+X+HW.png",
-    metric: "Visible Zoom Cushioning",
+      "https://media.sportsdirect.com.au/img-modify/fit=scale-down,f=auto,w=1536/dam-products/image/nike%2Faurora_if1610-103_phslh001-2000",
+    metric: "IsoPlate Support",
     shortDescription:
-      "Affordable powerhouse performance inspired by LeBron James's versatile game.",
+      "Luka Dončić's clean white signature edition optimized for step-backs and vision.",
     fullDetails:
-      "Utilizes dual-zoom units under the forefoot wrapped in a sturdy supportive heel counter for stability during drives.",
+      "Integrates full-length Formula 23 foam and an IsoPlate foot containment system to keep you stable on hard pivots.",
   },
   {
     id: 10,
-    title: "Nike Tatum 4",
+    title: "Nike G.T. Cut Academy 2",
+    category: "Guard Shoe",
+    image:
+      "https://media.sportsdirect.com.au/img-modify/fit=scale-down,f=auto,w=1536/dam-products/image/nike%2Faurora_hv9774-501_phslh001-2000",
+    metric: "Court-Feel Zoom Unit",
+    shortDescription:
+      "Engineered for speed, rapid cutting, and ultimate floor grip.",
+    fullDetails:
+      "Streamlined traction profile designed specifically for quick guards who need instant acceleration off the dribble.",
+  },
+  {
+    id: 11,
+    title: "Nike Giannis Immortality 5",
     category: "Forward Shoe",
     image:
-      "https://images.footballfanatics.com/logo-gear/nba-jordan-tatum-4-kids_ss5_p-203995354+u-3bahtb23nmsdhd4hfysj+v-e5s9hwgt8pjkd4b7ijah.jpg?_hv=2&w=400",
-    metric: "Lightweight Frame Tech",
+      "https://media.sportsdirect.com.au/img-modify/fit=scale-down,f=auto,w=1536/dam-products/image/nike%2Faurora_im5130-600_phslh000-2000",
+    metric: "Curved Sole Transition",
     shortDescription:
-      "Jayson Tatum's signature model built for seamless transition from wing scorer to defender.",
+      "Giannis Antetokounmpo's budget-friendly powerhouse built for relentless drives.",
     fullDetails:
-      "Features a hollowed-out rubber sole to reduce weight while maintaining maximum responsiveness under pressure.",
+      "Curved underfoot geometry ensures smooth heel-to-toe transitions while the internal containment system locks the foot down.",
+  },
+  {
+    id: 12,
+    title: "Nike Luka 5",
+    category: "Guard Shoe",
+    image:
+      "https://media.sportsdirect.com.au/img-modify/fit=scale-down,f=auto,w=1536/dam-products/image/nike%2Faurora_im5182-002_phslh000-2000",
+    metric: "Responsive Foam Core",
+    shortDescription:
+      "Built for shiftier movements and ultimate step-back control on the perimeter.",
+    fullDetails:
+      "Features a lightweight low-top frame optimized for lateral quickness and explosive deceleration.",
+  },
+  {
+    id: 13,
+    title: "Adidas Anthony Edwards 2",
+    category: "Guard Shoe",
+    image:
+      "https://media.sportsdirect.com.au/img-modify/fit=scale-down,f=auto,w=1536/dam-products/image/adidas%2Fkj4228_5_footwear_photography_side%20medial%20center%20view_transparent",
+    metric: "Lightstrike & Boost Combo",
+    shortDescription:
+      "Explosive signature shoe designed for Ant-Man's high-flying athleticism.",
+    fullDetails:
+      "Combines ultra-responsive Boost energy return with a futuristic generative support cage for elite lockdown.",
+  },
+  {
+    id: 14,
+    title: "Purple Jordan Luka 77",
+    category: "Guard Shoe",
+    image:
+      "https://media.sportsdirect.com.au/img-modify/fit=scale-down,f=auto,w=1536/dam-products/image/nike%2Faurora_if1610-501_phslh000-2000",
+    metric: "IsoPlate Support",
+    shortDescription:
+      "Vibrant purple colorway of Luka Dončić's signature model for elite court control.",
+    fullDetails:
+      "Integrates full-length Formula 23 foam and an IsoPlate foot containment system to keep you stable on hard pivots.",
+  },
+  {
+    id: 15,
+    title: "Black Nike LeBron Witness IX",
+    category: "Multi Shoe",
+    image:
+      "https://media.sportsdirect.com.au/img-modify/fit=scale-down,f=auto,w=1536/dam-products/image/nike%2Faurora_hq8034-009_phslh000-2000",
+    metric: "Zoom Air Units",
+    shortDescription:
+      "Sleek black colorway of the versatile Witness series for explosive drives.",
+    fullDetails:
+      "Utilizes forefoot Zoom Air units combined with a supportive padded collar for stability during sharp cuts in a stealthy look.",
+  },
+  {
+    id: 16,
+    title: "Black Jordan Luka 77",
+    category: "Guard Shoe",
+    image:
+      "https://media.sportsdirect.com.au/img-modify/fit=scale-down,f=auto,w=1536/dam-products/image/nike%2Faurora_if1610-003_phslh000-2000",
+    metric: "IsoPlate Support",
+    shortDescription:
+      "Stealthy black edition of Luka's signature shoe built for crafty playmakers.",
+    fullDetails:
+      "Features responsive foam cushioning and a rigid IsoPlate frame designed to handle sudden stops and quick direction changes.",
+  },
+  {
+    id: 17,
+    title: "White Nike LeBron Witness IX",
+    category: "Multi Shoe",
+    image:
+      "https://media.sportsdirect.com.au/img-modify/fit=scale-down,f=auto,w=1536/dam-products/image/nike%2Faurora_hq8034-004_phslh000-2000",
+    metric: "Zoom Air Units",
+    shortDescription:
+      "Sleek black colorway of the versatile Witness series for explosive drives.",
+    fullDetails:
+      "Utilizes forefoot Zoom Air units combined with a supportive padded collar for stability during sharp cuts in a stealthy look.",
+  },
+  {
+    id: 18,
+    title: "SKX Nexus GO",
+    category: "Guard Shoe",
+    image:
+      "https://media.sportsdirect.com.au/img-modify/fit=scale-down,f=auto,w=1536/dam-products/image/skechers%2F253015_prbk_profile_05_large",
+    metric: "Hyper Burst Cushioning",
+    shortDescription:
+      "High-rebound performance basketball shoe built for agile guards.",
+    fullDetails:
+      "Features Skechers' lightweight nitrogen-infused cushioning foam and a molded heel counter for secure lockdown.",
   },
 ];

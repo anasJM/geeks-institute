@@ -9,12 +9,11 @@
   --border-color: #23232325;
   --main-padding: 20px 50px;
 }
-
 /* body */
 body {
   font-family: "Roboto", Helvetica, sans-serif;
   color: var(--text-color);
-  background-color: var();
+  background-color: var(--white-background);
   margin: 0;
   padding: 0;
 }
@@ -22,8 +21,10 @@ body {
 /* header */
 header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
   padding: var(--main-padding);
   border-bottom: var(--border-color) 1px solid;
   background-color: var(--white-color);
@@ -58,6 +59,7 @@ header {
 
 #control-section {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 30px;
@@ -123,6 +125,7 @@ main #cards-grid {
 /* articles */
 
 article {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -165,6 +168,17 @@ article h2 {
 
 article p {
   font-size: 0.9em;
+}
+
+article h5 {
+  position: absolute;
+  top: 1px;
+  left: 20px;
+  padding: 7px 17px;
+  color: var(--text-color);
+  background-color: #cfcfcf;
+  border-radius: 100px;
+  font-size: 0.7em;
 }
 
 article:hover img {
@@ -224,10 +238,10 @@ dialog p {
 #dialog h5 {
   position: absolute;
   top: 40px;
-  padding: 10px 20px;
+  padding: 10px 25px;
   background-color: var(--text-color);
   color: var(--white-color);
-  border-radius: 5px;
+  border-radius: 100px;
   font-size: 0.8em;
 }
 
@@ -266,6 +280,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 40px;
   border: var(--border-color) 1px solid;
   font-weight: 700;
   font-size: 0.9em;
