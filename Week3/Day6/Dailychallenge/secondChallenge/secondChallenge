@@ -1,0 +1,96 @@
+const morse = `{
+  "0": "-----",
+  "1": ".----",
+  "2": "..---",
+  "3": "...--",
+  "4": "....-",
+  "5": ".....",
+  "6": "-....",
+  "7": "--...",
+  "8": "---..",
+  "9": "----.",
+  "a": ".-",
+  "b": "-...",
+  "c": "-.-.",
+  "d": "-..",
+  "e": ".",
+  "f": "..-.",
+  "g": "--.",
+  "h": "....",
+  "i": "..",
+  "j": ".---",
+  "k": "-.-",
+  "l": ".-..",
+  "m": "--",
+  "n": "-.",
+  "o": "---",
+  "p": ".--.",
+  "q": "--.-",
+  "r": ".-.",
+  "s": "...",
+  "t": "-",
+  "u": "..-",
+  "v": "...-",
+  "w": ".--",
+  "x": "-..-",
+  "y": "-.--",
+  "z": "--..",
+  ".": ".-.-.-",
+  ",": "--..--",
+  "?": "..--..",
+  "!": "-.-.--",
+  "-": "-....-",
+  "/": "-..-.",
+  "@": ".--.-.",
+  "(": "-.--.",
+  ")": "-.--.-",
+  " ": " / "
+}`;
+
+// convert a string to JSON
+const toJs = (morse) => {
+  return new Promise((resolve, reject) => {
+    const objectToJson = JSON.parse(morse);
+    if (Object.keys(objectToJson).length > 0) {
+      resolve(objectToJson);
+    } else {
+      reject("the object is empty");
+    }
+  });
+};
+
+// converts user input to morse
+const toMorse = (morse) => {
+  return new Promise((resolve, reject) => {
+    const userInput = prompt("Enter a word or a sentence:");
+    const userletters = userInput.split("");
+    const checkUserInput = userletters.every((letter) =>
+      Object.keys(morse).includes(letter),
+    );
+
+    if (checkUserInput) {
+      userletters.forEach((letter, num) => {
+        userletters[num] = morse[letter];
+      });
+      resolve(userletters);
+    } else {
+      reject("Error: the input contains a character that can't be translated!");
+    }
+  });
+};
+
+// join words
+const joinWords = (morseTranslation) => {
+  let output = "";
+  morseTranslation.forEach((element) => {
+    output += element + "<br>";
+  });
+  const h2 = document.createElement("h2");
+  h2.innerHTML = output;
+  document.body.append(h2);
+};
+
+toJs(morse)
+  .then((result) => toMorse(result))
+  .then((result) => joinWords(result))
+  .catch((error) => console.log(error));
