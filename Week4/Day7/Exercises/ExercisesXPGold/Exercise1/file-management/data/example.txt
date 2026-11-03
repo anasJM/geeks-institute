@@ -1,0 +1,7 @@
+ID   | FULL NAME         | ROLE                | STATUS   | METRIC SCORE
+-------------------------------------------------------------------
+101  | Alex Morgan       | Lead Developer      | Active   | 94.5
+102  | Sophia Martinez   | UI/UX Designer      | Active   | 88.0
+103  | Marcus Chen       | QA Automation Eng   | Pending  | 91.2
+104  | Emma Watson       | Product Manager     | Active   | 96.8
+105  | Liam O'Connor     | DevOps Specialist   | Inactive | 84.1
