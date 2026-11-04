@@ -1,0 +1,17 @@
+{
+  "name": "exercise3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "date-fns": "^4.4.0",
+    "date-holidays": "^3.38.0"
+  }
+}
