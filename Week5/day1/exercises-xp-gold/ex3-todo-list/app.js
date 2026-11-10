@@ -94,5 +94,5 @@ app.delete("/api/todos/:todoId", (req, res) => {
   }
 
   todos.splice(todoIndex, 1);
-  res.status(200).json(todos[todoIndex]);
+  res.status(200).json("todo is deleted!");
 });
