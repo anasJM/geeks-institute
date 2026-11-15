@@ -1,0 +1,9 @@
+.input-valid {
+  border-color: green;
+  background-color: rgb(200, 255, 200);
+}
+
+.input-not-valid {
+  border-color: red;
+  background-color: rgb(255, 200, 200);
+}
