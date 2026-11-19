@@ -1,0 +1,1 @@
+No message history: Each API call only sees what you explicitly pass in that request.

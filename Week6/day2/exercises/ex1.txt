@@ -1,0 +1,14 @@
+Message: How should I report a damaged package?
+
+Before:
+    - answer: To report a damaged package, please contact the customer support team of the company or retailer you purchased the item from.
+    
+    Since I do not have access to company policies, I cannot provide the specific steps, deadlines, or forms your particular retailer requires. When you reach out to them, it is usually helpful to have your order number, details of the damage, and photographs of both the packaging and the item ready.
+
+After:
+    - message: How should I report a damaged package?
+    - answer: To report a damaged package, please contact the customer support team of the company or retailer you purchased the item from. 
+
+    Since I do not have access to company policies, I cannot provide the specific steps or timeframes your retailer requires. 
+
+    Could you please share the name of the company or store you ordered from so I can guide you on what details they typically need?
