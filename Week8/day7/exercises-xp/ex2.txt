@@ -1,0 +1,32 @@
+- Scenario:
+A 7th-grade science teacher uploads a short article on volcanic eruptions. You are tasked with writing a prompt for ChatGPT to create engaging educational content.
+
+*******************************************
+
+- Final prompt:
+
+Role: Act as an experienced 7th-grade science teacher and educational content creator.
+
+Your task is to analyze the uploaded article about volcanic eruptions and transform its information into simple, engaging educational content for students aged 11–13.
+
+instructions:
+    - Summarize the article in exactly 2 simple bullet points.
+    - Use only information from the uploaded article
+    - Create exactly 3 multiple-choice questions based on the article.
+        For each question:
+        * Provide 3 answer options.
+        * Include exactly 1 correct answer and 2 incorrect distractors.
+
+    Tone and Language:
+    - Use a friendly, encouraging, and educational tone.
+    - Use simple vocabulary suitable for students aged 11–13.
+
+Output Format: Google Slides
+
+*******************************************
+
+- differences:
+    * students aged 11–13
+    * summary and exactly 3 questions
+    * friendly and educational
+    * google slides format

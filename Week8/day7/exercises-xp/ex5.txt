@@ -1,0 +1,40 @@
+* prompt:
+Act as a professional marketing copywriter for a wearable technology company.
+
+Write a short product blurb for the new smartwatch **PulseOne Mini** for an email marketing campaign.
+
+Follow these strict requirements:
+- Use a friendly and engaging tone.
+- Write exactly 3 bullet points.
+- Do not exceed 50 words in total.
+- Mention all 3 features: battery life, fitness tracking, and Bluetooth compatibility.
+- Use simple and attractive language.
+- Do not add an introduction or conclusion.
+
+Make sure all requirements are respected before providing the final text.
+
+******************************************
+
+* Run the Prompt and Evaluate:
+- Enjoy long-lasting battery life and stay connected throughout your day.
+- Track your daily steps, activities, and fitness progress with ease.
+- Connect PulseOne Mini to your smartphone with Bluetooth compatibility!
+
+Maximum 50 words	                Yes
+Battery life mentioned	            Yes
+Fitness tracking mentioned	        Yes
+Bluetooth compatibility mentioned	Yes
+Friendly and engaging tone	        Yes
+Exactly 3 bullet points	            Yes
+
+*****************************************
+
+* Two Mitigation Strategies
+- Source restriction: Instruct the model to use only the provided article and avoid external information.
+- Fact verification: Require the model to verify every statistic and claim against the original text before including it.
+
+*****************************************
+
+* Two Professional Domains Where Hallucinations Are Especially Risky
+- Healthcare:
+- Legal:

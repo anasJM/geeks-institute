@@ -1,0 +1,28 @@
+- Prompt: 
+Write something about productivity tips.
+
+1- Three critical issues:
+    * No target audience
+    * No brand identity
+    * No context
+
+- Final prompt:
+
+Act as a professional LinkedIn content creator and social media marketing specialist.
+
+Create an engaging LinkedIn post promoting FlowNest, a new productivity and focus app designed to help students, professionals, and freelancers improve their concentration and manage their daily tasks.
+
+Instructions:
+
+* Highlight 3 practical productivity tips.
+* Explain how FlowNest can help users stay focused and organized.
+* Start with an attention-grabbing hook.
+* Include a clear call to action encouraging readers to try FlowNest.
+
+Format and tone:
+
+* Use a friendly, professional, and motivating tone.
+* Use short paragraphs and bullet points.
+* maximum 200 words.
+
+Use this structure, tone, and approach whenever creating social media content to promote FlowNest.

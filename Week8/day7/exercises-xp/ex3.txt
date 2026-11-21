@@ -1,0 +1,24 @@
+1. Identify the missing context
+Context Type	    Is it Missing?	    What Should Be Added?
+Role	            Yes	                Act as a financial analyst.
+Audience	        Yes	                The summary is for a non-technical executive team.
+Purpose	            Yes	                Present the most important financial results during a monthly finance update.
+Input Source	    No	                Use the uploaded financial report.
+Format/Style	    Yes	                Use 3 key takeaways with bullet points and supporting financial figures.
+Constraints	        Yes	                Keep the summary suitable for a 3-minute presentation. Use simple and clear language.
+
+2. Rewritten prompt
+Act as an experienced financial analyst.
+
+Summarize the uploaded financial report for a monthly finance update presentation.
+The audience is a non-technical executive team.
+
+Include:
+    - 3 key takeaways from the report.
+    - Important financial figures, such as revenue, expenses, and profit.
+    - Any significant increases or decreases.
+    - A short explanation of the main financial results.
+
+Use simple and clear language, organize the information into bullet points, and keep the summary short enough for a 3-minute presentation.
+
+Use only information from the provided report.
