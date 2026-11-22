@@ -1,0 +1,14 @@
+1. Why does defining a tool not execute it?
+Defining a tool only tells the AI which functions are available and how to use them. The function executes only when the AI requests it and Python handles that request.
+
+2. Why must a tool result include the matching tool_call_id?
+It links the tool's result to the exact tool call requested by the AI, so the model knows which request the result belongs to.
+
+3. How do tools and response_format serve different purposes?
+- tools: Allows the AI to request Python functions to perform actions or retrieve data.
+- response_format: Defines the structure of the AI's final response, for example, a JSON object validated against a Pydantic schema.
+4. Why do we validate the final status against the tool results?
+To prevent incorrect answers. For example, if a book exists but has zero available copies, its status must be unavailable, not not_found.
+
+5. Which decisions in your application are controlled by Python?
+Python controls function execution, book searching, availability checking, data retrieval, and validation of results. The AI interprets the user's question and decides which tools to request.
