@@ -1,0 +1,11 @@
+Add a new record to Express:
+
+A407: {
+  order_id: "A407",
+  status: "processing",
+  delivery_estimate: null,
+}
+
+Output:
+
+The order with ID A407 is currently in "processing" status. There is no delivery estimate available at this time. You may want to check back later for updates on the delivery timeline.

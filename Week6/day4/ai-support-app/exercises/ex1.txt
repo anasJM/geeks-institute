@@ -1,0 +1,35 @@
+URL: http://127.0.0.1:5001/assist
+
+***************************
+
+User message: Check order A104.
+
+***************************
+
+Tools:
+Function name: get_order_status
+Function arguments: {'order_id': 'A104'}
+
+***************************
+
+Tool handler: {'get_order_status': <function get_order_status at 0x0000025EFA6FC5C0>}
+
+***************************
+
+Final result: {
+    'answer': 'Your order A104 has been shipped and is expected to arrive in 2–3 business days. This is an estimate, not a guaranteed delivery date. Let me know if you need further assistance!',
+    'tool_events': 
+    [
+        {
+            'name': 'get_order_status', 
+            'status': 'success',
+            'result': {
+                'ok': True, 'order': {
+                    'order_id': 'A104', 
+                    'status': 'shipped', 
+                    'delivery_estimate': '2–3 business days'
+                }
+            }
+        }
+    ]
+}

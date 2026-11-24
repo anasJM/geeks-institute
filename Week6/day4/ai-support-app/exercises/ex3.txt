@@ -1,0 +1,21 @@
+Call_1:
+
+execute_tool(
+    name="get_order_status",
+    arguments={"order_id": 104},
+    user_message="Where is A104?",
+)
+
+Behavior: Reject the request because order_id is an integer (104) instead of a string ("104") and it must start with the letter "A".
+
+*******************************
+
+Call_2:
+
+execute_tool(
+    name="unknown_operation",
+    arguments={},
+    user_message="Hello",
+)
+
+Behavior: Reject the request because unknown_operation is not a recognized tool.

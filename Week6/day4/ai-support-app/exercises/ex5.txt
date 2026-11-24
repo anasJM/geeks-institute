@@ -1,0 +1,25 @@
+1 - First call
+
+A205: {
+    order_id: "A205",
+    status: "processing",
+    delivery_estimate: null,
+}
+
+User input: check order A205
+
+Output:
+The order A205 is currently in **processing** status. A delivery estimate is not available at this time. Let me know if you need further assistance!
+
+2 - Second call
+
+A205: {
+    order_id: "A205",
+    status: "shipped",
+    delivery_estimate: "4-6 business days",
+}
+
+User input: check order A205
+
+Output:
+Your order A205 has been shipped and is estimated to arrive within 4-6 business days. Let me know if you need further assistance!

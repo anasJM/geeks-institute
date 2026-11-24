@@ -1,0 +1,5 @@
+Flask
+openai
+pydantic>=2,<3
+python-dotenv
+requests

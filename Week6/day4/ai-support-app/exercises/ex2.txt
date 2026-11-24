@@ -1,0 +1,7 @@
+User message: Where is my order?
+
+***************************
+
+Final result: {
+    'answer': "To check the status of your order, I'll need the specific order ID. Could you please provide the order ID so I can look it up for you?", 'tool_events': []
+}
