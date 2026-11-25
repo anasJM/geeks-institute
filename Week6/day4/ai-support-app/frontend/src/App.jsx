@@ -73,6 +73,17 @@ export default function App() {
           <p style={{ whiteSpace: "pre-wrap" }}>{result.answer}</p>
 
           <h2>Tool activity</h2>
+          <p>Execution: {result.status}</p>
+
+          <p>
+            Model calls: {result.model_calls}
+            {" · "}
+            Tool calls: {result.tool_calls}
+          </p>
+
+          {result.status === "stopped" && (
+            <p role="status">Execution stopped: {result.stop_reason}</p>
+          )}
 
           {result.tool_events.length === 0 ? (
             <p>No tool was executed.</p>
@@ -85,6 +96,12 @@ export default function App() {
 
                 <pre style={{ overflowX: "auto" }}>
                   {JSON.stringify(event.result, null, 2)}
+                </pre>
+
+                <p>Requested during model call {event.model_call}</p>
+                <h3>Arguments</h3>
+                <pre style={{ overflowX: "auto" }}>
+                  {JSON.stringify(event.arguments, null, 2)}
                 </pre>
               </details>
             ))

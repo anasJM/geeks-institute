@@ -15,8 +15,8 @@ const orders = {
   },
   A205: {
     order_id: "A205",
-    status: "shipped",
-    delivery_estimate: "4-6 business days",
+    status: "processing",
+    delivery_estimate: null,
   },
   A306: {
     order_id: "A306",
@@ -67,7 +67,7 @@ app.post("/api/assist", async (req, res) => {
       body: JSON.stringify({
         message: req.body?.message,
       }),
-      signal: AbortSignal.timeout(60_000),
+      signal: AbortSignal.timeout(120_000),
     });
 
     const data = await response.json();

@@ -1,0 +1,5 @@
+-Input:
+Check my order and explain what I should do next.
+
+-Output:
+Could you please provide the order ID you’d like me to check?

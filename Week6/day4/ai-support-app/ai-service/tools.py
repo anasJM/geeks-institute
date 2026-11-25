@@ -3,7 +3,10 @@ import re
 import requests
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 
+from policies import search_policy
 
+
+# Order argument structure
 class OrderLookupArguments(BaseModel):
     model_config = ConfigDict(
         extra="forbid",
@@ -15,7 +18,38 @@ class OrderLookupArguments(BaseModel):
         description="An order reference such as A104.",
     )
 
+# policy search argument structue
+class PolicySearchArguments(BaseModel):
+    model_config = ConfigDict(
+        extra="forbid",
+        strict=True,
+    )
 
+    query: str = Field(
+        min_length=1,
+        max_length=200,
+        description="Short keywords describing the relevant policy.",
+    )
+
+# search policy tool object
+
+SEARCH_POLICY_TOOL = {
+    "type": "function",
+    "function": {
+        "name": "search_policy",
+        "description": (
+            "Search the fictional store's short policy records. "
+            "Use it for questions requiring store-specific guidance. "
+            "When guidance depends on an order's status, first retrieve "
+            "the order and use that status in the search query. "
+            "An empty result means no matching policy was retrieved."
+        ),
+        "parameters": PolicySearchArguments.model_json_schema(),
+    },
+}
+
+
+# Get order tool object
 GET_ORDER_TOOL = {
     "type": "function",
     "function": {
@@ -35,7 +69,7 @@ GET_ORDER_TOOL = {
     }
 }
 
-
+# tool error
 def tool_error(code, message):
     return {
         "ok": False,
@@ -45,7 +79,7 @@ def tool_error(code, message):
         },
     }
 
-
+# Get order tool
 def get_order_status(order_id):
     try:
         response = requests.get(
@@ -90,43 +124,54 @@ def get_order_status(order_id):
             "The order information could not be retrieved.",
         )
 
+TOOL_DEFINITIONS = [
+    GET_ORDER_TOOL,
+    SEARCH_POLICY_TOOL,
+]
 
-TOOL_HANDLERS = {
-    "get_order_status": get_order_status,
+TOOL_REGISTRY = {
+    "get_order_status": {
+        "arguments": OrderLookupArguments,
+        "handler": get_order_status,
+    },
+    "search_policy": {
+        "arguments": PolicySearchArguments,
+        "handler": search_policy,
+    },
 }
 
-
+# execute the tool
 def execute_tool(name, arguments, user_message):
-    print(f"Tool handler: {TOOL_HANDLERS}")
-    print("\n***************************\n")
-    if name not in TOOL_HANDLERS:
+    entry = TOOL_REGISTRY.get(name)
+
+    if entry is None:
         return tool_error(
             "unknown_tool",
             "The requested operation is unavailable.",
         )
 
     try:
-        validated = OrderLookupArguments.model_validate(arguments)
+        validated = entry["arguments"].model_validate(arguments)
     except ValidationError:
         return tool_error(
             "invalid_arguments",
-            "The order ID must use a format such as A104.",
+            "The tool arguments failed validation.",
         )
 
-    explicit_ids = {
-        value.upper()
-        for value in re.findall(
-            r"\bA[0-9]{3}\b",
-            user_message,
-            flags=re.IGNORECASE,
-        )
-    }
+    if name == "get_order_status":
+        explicit_ids = {
+            value.upper()
+            for value in re.findall(
+                r"\bA[0-9]{3}\b",
+                user_message,
+                flags=re.IGNORECASE,
+            )
+        }
 
-    if validated.order_id not in explicit_ids:
-        return tool_error(
-            "unsupported_order_id",
-            "The requested order ID was not provided in the message.",
-        )
+        if validated.order_id not in explicit_ids:
+            return tool_error(
+                "unsupported_order_id",
+                "The order ID was not provided in the message.",
+            )
 
-    handler = TOOL_HANDLERS[name]
-    return handler(validated.order_id)
+    return entry["handler"](**validated.model_dump())

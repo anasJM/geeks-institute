@@ -1,0 +1,9 @@
+- Input:
+Compare the statuses of orders A104 and A205.
+
+Model calls: 2
+Tool calls: 2 get_order_status
+
+- Output:
+Order A104 is **shipped** with a delivery estimate of 2–3 business days. Order A205 is **processing** with no delivery estimate available. 
+The key difference is that A104 has already shipped, while A205 is still in processing status.

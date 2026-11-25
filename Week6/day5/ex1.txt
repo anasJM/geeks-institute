@@ -1,0 +1,10 @@
+*project is in day 4
+---------------------------------------------
+
+input:
+Check order A205, then find the policy relevant to its current status.
+
+- Output:
+Order A205 is currently **processing**.  
+
+**Relevant policy:** Orders being prepared – an order marked “processing” is in the process of being prepared, and a delivery estimate may not yet be available. If you need help with its progress, please contact support.

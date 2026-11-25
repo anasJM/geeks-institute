@@ -1,0 +1,36 @@
+- Input:
+
+Where is order A104?
+
+- Model call count: 2
+
+- Tool call count: 1
+
+- Tool selection: get_order_status
+
+- Final answer:
+
+Order A104 is currently **shipped** and is expected to arrive in **2–3 business days**. Let me know if you need further assistance!
+
+--------------------------------------------------------------
+
+- Input:
+
+Check order A104 and explain the relevant delivery-delay guidance.
+
+- Model call count: 3
+
+- Tool call count: 2
+
+- Tool selection: get_order_status & search_policy
+
+- Final answer:
+
+Your order A104 is currently **shipped** and the system estimates delivery within **2–3 business days**.
+
+**Delivery‑delay guidance**
+
+- Review the delivery estimate for A104.  
+- If the estimated window has already passed (i.e., you should have received the order by now), please contact our support team and provide the order reference **A104** so we can investigate the shipment.  
+
+If the estimated delivery period is still within the next few days, no delay has occurred yet; the order is on schedule. Let us know if you’d like any further assistance (e.g., tracking details, updating the delivery address, etc.).

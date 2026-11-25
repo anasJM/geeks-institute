@@ -6,7 +6,8 @@ from dotenv import load_dotenv
 from openai import OpenAI, APIError, APITimeoutError
 from flask import Flask, jsonify, request
 
-from tool_chat import answer_with_tool
+# from tool_chat import answer_with_tool
+from agent import run_agent
 
 # Load environment variables
 load_dotenv(Path(__file__).with_name(".env"))
@@ -160,7 +161,7 @@ def assist():
         }), 400
 
     try:
-        result = answer_with_tool(
+        result = run_agent(
             client=client,
             model=model,
             message=message,

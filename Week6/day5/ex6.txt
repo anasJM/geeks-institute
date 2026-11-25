@@ -1,0 +1,13 @@
+- Input:
+Check order A999 and explain its delivery status.
+
+- Output:
+The order ID "A999" was not found in the system. Please verify the order ID or provide additional details (e.g., date, items) to help locate the correct order.
+
+{
+  "error": {
+    "code": "order_not_found",
+    "message": "No matching order was found."
+  },
+  "ok": false
+}
